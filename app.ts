@@ -3,6 +3,7 @@ type person = {
   age?: number;
   hobbie: string[];
   role: number;
+  tuple: [string, number];
 };
 
 type Combinable = number | string;
@@ -16,6 +17,7 @@ const person: person = {
   name: "ted",
   hobbie: ["cooking", "soccer"],
   role: Role.ADMIN,
+  tuple: ["ted", 5],
 };
 
 const number2 = 2.8;
@@ -59,3 +61,9 @@ if (typeof userInput === "string") {
 function generateError(message: string, code: number): never {
   throw { message: message, errorCode: code };
 }
+
+function f(n: number | string, s: string): void {
+  console.log("This is a function");
+}
+
+const x: (n: number | string, s: string) => void = f;
