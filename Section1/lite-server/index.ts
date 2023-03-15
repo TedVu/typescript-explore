@@ -16,3 +16,6 @@ const person: {
   role: [5, "test"],
   gender: Gender.FEMALE,
 };
+
+// union type
+const combine = (input1: number | string, input2: number | string) => {};
