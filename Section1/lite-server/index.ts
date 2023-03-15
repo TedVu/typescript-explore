@@ -9,12 +9,14 @@ const person: {
   hobbies?: string[];
   role?: [number, string];
   gender?: Gender;
+  literal?: "ted" | "kevin" | "mia";
 } = {
   name: "Ted Vu",
   age: 30,
   hobbies: ["sport"],
   role: [5, "test"],
   gender: Gender.FEMALE,
+  literal: "kevin",
 };
 
 // union type
