@@ -1,9 +1,10 @@
-type person = {
-  name: String;
-  age: 30;
-};
-
-const person: person = {
+// object type
+const person: {
+  name?: string;
+  age?: number;
+  hobbies?: string[];
+} = {
   name: "Ted Vu",
   age: 30,
+  hobbies: ["sport"],
 };
