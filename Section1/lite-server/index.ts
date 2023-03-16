@@ -23,3 +23,7 @@ type NumberOrString = number | string;
 
 // union type
 const combine = (input1: NumberOrString, input2: number | string) => {};
+
+const doSomething = (): void => {
+  console.log("Do something");
+};
