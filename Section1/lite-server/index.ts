@@ -35,9 +35,26 @@ const callback = (num): number => {
   return 5;
 };
 
-// callback has a different behaviour than normal, the type of the function doesn't apply to call back
+// callback has a different behaviour, the type of the function doesn't apply to call back
 const callCallback = (cb: (string) => void) => {
   cb(1);
 };
 
 callCallback(callback);
+
+// Difference between unknown and any
+let userInput: unknown;
+let userName: string;
+
+userInput = 5;
+userName = "5";
+
+// this will get compilation error as unknown type cannot be reassigned
+// userName = userInput;
+
+// never represents the type of values that never occurs
+// never is a subtype of everytype and no type is a subtype of never
+// hence, never is assignable to any type but no type is assignable to never
+function throwException(): never {
+  throw new Error("Im an error");
+}
