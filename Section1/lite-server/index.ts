@@ -28,4 +28,4 @@ const doSomething = (): void => {
   console.log("Do something");
 };
 
-const doSomething2: Function = doSomething;
+const doSomething2: () => void = doSomething;
