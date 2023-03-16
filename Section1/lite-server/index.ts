@@ -29,3 +29,13 @@ const doSomething = (): void => {
 };
 
 const doSomething2: () => void = doSomething;
+
+const callback = (num) => {
+  console.log(`I'm a callback with a number received as ${num}`);
+};
+
+const callCallback = (cb) => {
+  cb(1);
+};
+
+callCallback(callback);
