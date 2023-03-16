@@ -19,5 +19,7 @@ const person: {
   literal: "kevin",
 };
 
+type NumberOrString = number | string;
+
 // union type
-const combine = (input1: number | string, input2: number | string) => {};
+const combine = (input1: NumberOrString, input2: number | string) => {};
