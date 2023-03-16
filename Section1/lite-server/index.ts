@@ -30,11 +30,13 @@ const doSomething = (): void => {
 
 const doSomething2: () => void = doSomething;
 
-const callback = (num) => {
+const callback = (num): number => {
   console.log(`I'm a callback with a number received as ${num}`);
+  return 5;
 };
 
-const callCallback = (cb) => {
+// callback has a different behaviour than normal, the type of the function doesn't apply to call back
+const callCallback = (cb: (string) => void) => {
   cb(1);
 };
 
