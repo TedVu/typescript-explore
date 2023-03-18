@@ -1,5 +1,11 @@
 const button = document.getElementById("btn");
 
-button?.addEventListener("click", () => {
-  console.log("Button clicked");
-});
+function clickHandler(message: string) {
+  console.log("Clicked");
+}
+
+const clickHandler2 = (message: string) => {
+  console.log(`Click handler 2 ${message}`);
+};
+
+button?.addEventListener("click", () => {});
