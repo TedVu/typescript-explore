@@ -58,3 +58,5 @@ userName = "5";
 function throwException(): never {
   throw new Error("Im an error");
 }
+
+let b = 5;
