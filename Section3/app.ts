@@ -21,3 +21,5 @@ age = "ted";
 // var and let allows while const do not
 // 4. Redeclaration
 // var allows while let and const do not
+
+// this keyword = object that is executing the function
