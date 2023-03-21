@@ -20,3 +20,9 @@ function printEmployeeInfo(emp: UnknownEmployee) {
 class Vehicle {
   drive() {}
 }
+
+type V = Vehicle;
+
+const v: V = {
+  drive() {},
+};
