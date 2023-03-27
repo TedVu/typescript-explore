@@ -1,20 +1,70 @@
-const promise1 = Promise.resolve(123);
+// const promise1 = Promise.reject(123);
 
-promise1.then((value) => {
-  console.log(`Value is ${value}`);
+// promise1
+//   .then((value) => {
+//     console.log(`Value is ${value}`);
+//   })
+//   .catch((err) => {
+//     console.log("Will I ever be called ? ");
+//   });
+
+// let p = new Promise((resolve, reject) => {
+//   let a = 1 + 1;
+//   if (a == 3) {
+//     resolve("Success");
+//   } else {
+//     reject("Failed");
+//   }
+// });
+
+// p.then((message) => {
+//   console.log(`This is the message from calling resolve ${message}`);
+// }).catch((message) => {
+//   console.log(`This is the message from calling reject ${message}`);
+// });
+
+// Promise helps solve the problem of callback hell
+
+// const userLeft = true;
+// const userWatchingCatMeme = false;
+// const watchTutorialCallback = new Promise((resolve, reject) => {
+//   if (userLeft) {
+//     reject({
+//       name: "User Left",
+//       message: ":(",
+//     });
+//   } else if (userWatchingCatMeme) {
+//     reject({
+//       name: "User Watching cat meme",
+//       message: "WebDevSimplified < Cat",
+//     });
+//   } else {
+//     resolve("Thumbs up and Subscribe");
+//   }
+// });
+
+// watchTutorialCallback
+//   .then((msg) => {
+//     console.log("Success: " + msg);
+//   })
+//   .catch((err) => {
+//     console.log(err.name + " " + err.message);
+//   });
+
+const promise1 = new Promise((resolve, reject) => {
+  resolve("Video 1 recorded");
 });
 
-let p = new Promise((resolve, reject) => {
-  let a = 1 + 1;
-  if (a == 3) {
-    resolve("Success");
-  } else {
-    reject("Failed");
-  }
+const promise2 = new Promise((resolve, reject) => {
+  resolve("Video 2 recorded");
 });
 
-p.then((message) => {
-  console.log(`This is the message from calling resolve ${message}`);
-}).catch((message) => {
-  console.log(`This is the message from calling reject ${message}`);
+const promise3 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("Video 3 recorded");
+  }, 5000);
+});
+
+Promise.all([promise1, promise2, promise3]).then((msg) => {
+  console.log(msg);
 });
