@@ -65,7 +65,8 @@ const promise3 = new Promise((resolve, reject) => {
   }, 5000);
 });
 
-Promise.all([promise1, promise2, promise3]).then((msg) => {
+// race will only execute the first resolve but wait all to be end
+Promise.race([promise1, promise2, promise3]).then((msg) => {
   console.log(msg);
 });
 
