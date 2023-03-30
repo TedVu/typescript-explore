@@ -3,6 +3,9 @@
 // this refers to the object that is executing / calling a function
 // this in a function refers to the global object / in browser it is the browser window object
 // in strict mode, however, this doesn't have default binding and will be undefined
+// a callback is a case where we need to take care, if we pass in a normal function as a callback
+// that function will have the this binding to the function (because it is called in side another function)
+// a way to solve this problem of course is to use forEach
 
 // an example of bounding this to an object
 const person = {
@@ -24,4 +27,5 @@ const person2 = {
 };
 
 person.callMyName();
-person.iteration.call(person2);
+person.callMyName.call(person2);
+person.callMyName.bind(person2)();
