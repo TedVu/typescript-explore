@@ -74,6 +74,7 @@ const t = Promise.resolve(() => {
   console.log("Do something please");
 });
 
+// value here is a arrow function
 t.then((value) => {
   value();
 });
