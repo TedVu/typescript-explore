@@ -1,4 +1,5 @@
-function merge<T, U>(objA: T, objB: U) {
+// type constraint in action with extends keyword
+function merge<T extends object, U>(objA: T, objB: U) {
   return { ...objA, ...objB };
 }
 
