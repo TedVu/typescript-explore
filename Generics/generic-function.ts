@@ -24,3 +24,9 @@ function countAndDescribe<T extends Lengthy>(element: T): [T, string] {
 }
 
 console.log(countAndDescribe("Ted Vu"));
+
+function extractAndCover<T extends object, U extends keyof T>(m: T, k: U) {
+  return m[k];
+}
+
+console.log(extractAndCover({ name: "ted" }, "name"));
