@@ -17,3 +17,7 @@ function createCourseGoal(
 
   return courseGoal as CourseGoal;
 }
+
+const names: Readonly<string[]> = ["Ted", "Kevin"];
+// cannot do this
+// names.push('Mia');
