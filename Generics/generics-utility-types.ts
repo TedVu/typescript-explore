@@ -21,3 +21,4 @@ function createCourseGoal(
 const names: Readonly<string[]> = ["Ted", "Kevin"];
 // cannot do this
 // names.push('Mia');
+// note: genercis is different with union in the sense that we only deal with 1 type of data once we select at initialization
