@@ -1,6 +1,6 @@
 const input1 = document.getElementById("num1")! as HTMLInputElement;
 
-const sum = (a: number, b: number): number => {
+const sum = (a: HTMLInputElement, b: number): number => {
   return a + b;
 };
 

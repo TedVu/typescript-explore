@@ -9,3 +9,14 @@ const clickHandler2 = (message: string) => {
 };
 
 button?.addEventListener("click", () => {});
+
+function generateError(message: string, errorCode: number): never {
+  throw { message: message, errorCode: errorCode };
+}
+
+const a: [number, string] = [1, "ted"];
+
+const b: null = null;
+
+let c: never;
+let d: any;
